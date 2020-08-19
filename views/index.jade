@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to LeeAnna's MEAN resource page!
+  
+  // Wrapper
+  #wrapper
+
+    // RESOURCE INFO
+    #resourceInfo
+      h2 Resource Information
+      p
+        strong Title:
+        |  <span id='resourceInfoTitle'></span>
+        br
+        strong Link:
+        |  <span id='resourceInfoLink'></span>
+        br
+        strong Author:
+        |  <span id='resourceInfoAuthor'></span>
+        br
+        strong Publisher:
+        |  <span id='resourceInfoPublisher'></span>
+    // /RESOURCE INFO
+
+    // RESOURCE LIST
+    h2 Resource List
+    #resourceList
+      table
+        thead
+          th eBook/Resource Title
+          th Links to eBooks/Resources 
+          th Delete?
+        tbody
+    // /RESOURCE LIST
+
+    // ADD RESOURCE
+    h2 Add Resource
+    #addResource
+      fieldset
+        input#inputResourceTitle(type='text', placeholder='Title')
+        input#inputResourceLink(type='text', placeholder='Link')
+        br
+        input#inputResourceAuthor(type='text', placeholder='Author')
+        input#inputResourcePublisher(type='text', placeholder='Publisher')
+        br
+        button#btnAddResource Add Resource
+    // /ADD RESOURCE
+
+  // /WRAPPER
